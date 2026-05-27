@@ -1,0 +1,25 @@
+{
+  "name": "website-dummy",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n SERVER,CLIENT -c blue,green \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "npm --workspace server run dev",
+    "dev:client": "npm --workspace client run dev",
+    "build": "npm --workspace server run build && npm --workspace client run build",
+    "start": "npm --workspace server run start",
+    "check-db": "npm --workspace server run check-db",
+    "seed": "npm --workspace server run seed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Env files — JANGAN commit (Paste manual di Vercel: Settings → Environment Variables).
+.env
+.env.*
+!.env.example
+
+# Logs / caches / tooling temp files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+.cache/
+
+# OS / IDE / Editors (hapus baris yang tidak kamu inginkan)
+.DS_Store
+Thumbs.db
+.idea/
+*.sw?
+.temp*
